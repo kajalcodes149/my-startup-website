@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en" class="h-full scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Orbitlane is a customer messaging platform that helps SaaS teams respond faster, stay consistent, and convert more trials."
+    />
+    <title>Orbitlane — customer messaging that scales</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="h-full bg-slate-50 text-slate-900 antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-xl focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+    >
+      Skip to content
+    </a>
+    <!-- Subtle background decoration -->
+    <div aria-hidden="true" class="fixed inset-0 -z-10 overflow-hidden">
+      <div
+        class="pointer-events-none absolute -top-32 left-1/2 h-[540px] w-[980px] -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-500/18 via-purple-500/14 to-cyan-400/14 blur-3xl"
+      ></div>
+      <div
+        class="pointer-events-none absolute -bottom-40 right-[-220px] h-[520px] w-[520px] rounded-full bg-gradient-to-br from-purple-500/12 to-indigo-500/10 blur-3xl"
+      ></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(15,23,42,0.06),transparent_55%)]"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 border-b border-slate-900/10 bg-white/70 backdrop-blur">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Primary">
+        <a href="#home" class="group inline-flex items-center gap-2">
+          <span
+            class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 shadow-soft ring-1 ring-slate-900/10 transition group-hover:brightness-110"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" class="h-5 w-5 text-white" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 2a8.5 8.5 0 1 1 0 17a8.5 8.5 0 0 1 0-17Zm0 3.25a.9.9 0 0 0-.9.9v2.1H9a.9.9 0 0 0 0 1.8h2.1v2.1a.9.9 0 1 0 1.8 0v-2.1H15a.9.9 0 1 0 0-1.8h-2.1v-2.1a.9.9 0 0 0-.9-.9Z"
+              />
+            </svg>
+          </span>
+          <span class="text-base font-semibold tracking-tight text-slate-900">Orbitlane</span>
+        </a>
+
+        <div class="hidden items-center gap-7 md:flex">
+          <a href="#home" class="text-sm font-medium text-slate-700 transition hover:text-slate-900">Home</a>
+          <a href="#features" class="text-sm font-medium text-slate-700 transition hover:text-slate-900">Features</a>
+          <a href="#pricing" class="text-sm font-medium text-slate-700 transition hover:text-slate-900">Pricing</a>
+          <a href="#contact" class="text-sm font-medium text-slate-700 transition hover:text-slate-900">Contact</a>
+
+          <a
+            href="#pricing"
+            class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-soft ring-1 ring-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-900/95"
+          >
+            Start free
+          </a>
+        </div>
+
+        <button
+          type="button"
+          class="inline-flex items-center justify-center rounded-xl border border-slate-900/10 bg-white p-2 text-slate-900 shadow-soft transition hover:bg-slate-50 md:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M4 6.75A.75.75 0 0 1 4.75 6h14.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 6.75Zm0 5.25A.75.75 0 0 1 4.75 11.25h14.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 12Zm0 5.25A.75.75 0 0 1 4.75 16.5h14.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 17.25Z"
+            />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div class="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8 md:hidden">
+        <div data-menu class="hidden rounded-2xl border border-slate-900/10 bg-white/95 p-3 shadow-soft backdrop-blur">
+          <div class="grid gap-1">
+            <a href="#home" class="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-slate-900">Home</a>
+            <a href="#features" class="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-slate-900">Features</a>
+            <a href="#pricing" class="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-slate-900">Pricing</a>
+            <a href="#contact" class="rounded-xl px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-slate-900">Contact</a>
+          </div>
+          <div class="mt-3">
+            <a
+              href="#pricing"
+              class="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-soft ring-1 ring-slate-900/10 transition hover:bg-slate-900/95"
+            >
+              Start free
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section id="home" class="relative">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+          <div class="grid items-center gap-12 lg:grid-cols-2">
+            <div class="reveal">
+              <div class="inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-soft">
+                <span class="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_0_6px_rgba(16,185,129,0.16)]" aria-hidden="true"></span>
+                Now supporting shared inbox + CRM notes
+              </div>
+
+              <h1 class="mt-6 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+                Customer messaging that stays
+                <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">fast</span>,
+                <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">consistent</span>,
+                and genuinely helpful.
+              </h1>
+
+              <p class="mt-5 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
+                Orbitlane helps SaaS teams answer trial questions, follow up at the right moment, and keep every reply on‑brand — without
+                turning your inbox into a template factory.
+              </p>
+
+              <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a
+                  href="#pricing"
+                  class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-soft ring-1 ring-slate-900/10 transition hover:-translate-y-0.5 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-indigo-400/40"
+                >
+                  Get started
+                </a>
+                <a
+                  href="#contact"
+                  class="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-900/10 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-soft transition hover:-translate-y-0.5 hover:bg-slate-50"
+                >
+                  <span>Live demo</span>
+                  <svg viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M13.5 5.75a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0V7.56l-7.22 7.22a.75.75 0 0 1-1.06-1.06l7.22-7.22h-2.19a.75.75 0 0 1-.75-.75Z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M5 6.75A2.75 2.75 0 0 1 7.75 4h3.25a.75.75 0 0 1 0 1.5H7.75c-.69 0-1.25.56-1.25 1.25v9.5c0 .69.56 1.25 1.25 1.25h9.5c.69 0 1.25-.56 1.25-1.25V13a.75.75 0 0 1 1.5 0v3.25A2.75 2.75 0 0 1 17.25 19h-9.5A2.75 2.75 0 0 1 5 16.25v-9.5Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="mt-10 grid grid-cols-3 gap-4">
+                <div class="rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                  <div class="text-2xl font-semibold text-slate-900">28%</div>
+                  <div class="mt-1 text-xs text-slate-600">faster first reply</div>
+                </div>
+                <div class="rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                  <div class="text-2xl font-semibold text-slate-900">1.9×</div>
+                  <div class="mt-1 text-xs text-slate-600">more trial → paid</div>
+                </div>
+                <div class="rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                  <div class="text-2xl font-semibold text-slate-900">10 min</div>
+                  <div class="mt-1 text-xs text-slate-600">setup time</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Illustration / product mock (pure HTML) -->
+            <div class="reveal">
+              <div class="relative overflow-hidden rounded-3xl border border-slate-900/10 bg-white shadow-lift">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/8 to-cyan-400/10"></div>
+                <div class="relative p-6 sm:p-8">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <span class="h-2.5 w-2.5 rounded-full bg-rose-400/90"></span>
+                      <span class="h-2.5 w-2.5 rounded-full bg-amber-300/90"></span>
+                      <span class="h-2.5 w-2.5 rounded-full bg-emerald-300/90"></span>
+                    </div>
+                    <span class="text-xs font-medium text-slate-500">Inbox overview</span>
+                  </div>
+
+                  <div class="mt-6 grid gap-4">
+                    <div class="rounded-2xl border border-slate-900/10 bg-slate-50 p-4">
+                      <div class="flex items-start justify-between gap-3">
+                        <div>
+                          <div class="text-sm font-semibold text-slate-900">Trial question: “Do you support SSO?”</div>
+                          <div class="mt-1 text-xs text-slate-500">
+                            From <span class="font-medium text-slate-700">Noah</span> · 6 minutes ago · Website chat
+                          </div>
+                        </div>
+                        <span class="rounded-full bg-indigo-600/10 px-2 py-1 text-xs font-semibold text-indigo-700 ring-1 ring-indigo-600/10">
+                          Needs reply
+                        </span>
+                      </div>
+                      <div class="mt-4 grid gap-2">
+                        <div class="rounded-xl border border-slate-900/10 bg-white p-3 text-xs text-slate-700">
+                          Draft: “Yes — we support Okta and Azure AD. If you tell me your plan, I’ll share the exact setup steps.”
+                        </div>
+                        <div class="flex items-center justify-between">
+                          <div class="text-xs text-slate-500">Voice match: <span class="font-semibold text-emerald-700">94%</span></div>
+                          <button
+                            type="button"
+                            class="rounded-xl bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-slate-900/95"
+                          >
+                            Send
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+                      <div class="rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                        <div class="text-xs font-semibold text-slate-600">Next best action</div>
+                        <div class="mt-1 text-sm font-semibold text-slate-900">Offer a 12‑min walkthrough</div>
+                        <div class="mt-2 text-xs text-slate-500">Suggested time: Thu 10:30–12:00</div>
+                      </div>
+                      <div class="rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                        <div class="text-xs font-semibold text-slate-600">Quiet leads</div>
+                        <div class="mt-1 text-sm font-semibold text-slate-900">3 trials went silent</div>
+                        <div class="mt-2 text-xs text-slate-500">Re‑engage with value-first check‑ins.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-slate-900/10 pt-5">
+                    <div class="flex items-center gap-2 text-xs text-slate-500">
+                      <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-white ring-1 ring-slate-900/10">⚡</span>
+                      Rules + approvals you control.
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="rounded-full bg-white px-3 py-1 text-xs text-slate-600 ring-1 ring-slate-900/10">Gmail</span>
+                      <span class="rounded-full bg-white px-3 py-1 text-xs text-slate-600 ring-1 ring-slate-900/10">Slack</span>
+                      <span class="rounded-full bg-white px-3 py-1 text-xs text-slate-600 ring-1 ring-slate-900/10">HubSpot</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4 text-center text-xs text-slate-500">A lightweight product preview — no images required.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social proof -->
+      <section class="border-y border-slate-900/10 bg-white/60">
+        <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <div class="reveal flex flex-col items-center justify-between gap-6 md:flex-row">
+            <p class="text-sm text-slate-600">Trusted by thoughtful teams who optimize for clarity, not volume.</p>
+            <div class="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-slate-600">
+              <span class="rounded-xl border border-slate-900/10 bg-white px-3 py-2 shadow-soft">HarborStack</span>
+              <span class="rounded-xl border border-slate-900/10 bg-white px-3 py-2 shadow-soft">LunaPay</span>
+              <span class="rounded-xl border border-slate-900/10 bg-white px-3 py-2 shadow-soft">Kiteworks</span>
+              <span class="rounded-xl border border-slate-900/10 bg-white px-3 py-2 shadow-soft">Evertrail</span>
+              <span class="rounded-xl border border-slate-900/10 bg-white px-3 py-2 shadow-soft">SunsetCRM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="relative">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="text-sm font-semibold text-indigo-700">Features</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">A calmer way to run support & sales</h2>
+            <p class="mt-4 text-base text-slate-600">
+              Orbitlane drafts, routes, and suggests next steps — your team stays in control of the final message.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Feature 1 -->
+            <article class="reveal group rounded-3xl border border-slate-900/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
+              <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-indigo-600/10 ring-1 ring-indigo-600/10">
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-indigo-700" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M7 3a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h1v2.25a.75.75 0 0 0 1.28.53L12.06 17H17a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4H7Zm-2 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-5.41a1.5 1.5 0 0 0-1.06.44L10 16.47V16a1 1 0 0 0-1-1H7a2 2 0 0 1-2-2V7Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Drafts that sound like your team</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Set a voice profile once (concise, warm, technical) and keep every reply aligned — even when you’re moving fast.
+              </p>
+              <div class="mt-4 text-sm font-semibold text-indigo-700 transition group-hover:text-indigo-800">Explore →</div>
+            </article>
+
+            <!-- Feature 2 -->
+            <article class="reveal group rounded-3xl border border-slate-900/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
+              <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-600/10 ring-1 ring-purple-600/10">
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-purple-700" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a8 8 0 1 1 0 16A8 8 0 0 1 12 2Zm0 3a1 1 0 0 0-1 1v5a1 1 0 0 0 .46.85l3 1.9a1 1 0 1 0 1.08-1.7L13 10.44V6a1 1 0 0 0-1-1Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Timing that feels natural</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Send follow-ups when customers are most likely to respond — based on time zones and past conversations, not guesswork.
+              </p>
+              <div class="mt-4 text-sm font-semibold text-indigo-700 transition group-hover:text-indigo-800">Explore →</div>
+            </article>
+
+            <!-- Feature 3 -->
+            <article class="reveal group rounded-3xl border border-slate-900/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
+              <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-600/10 ring-1 ring-cyan-600/10">
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-cyan-700" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M7 4a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm1 3a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm0 4a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm0 4a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Context from your tools</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Pull key notes and fields from your CRM so the right details show up in the draft — without tab-hopping.
+              </p>
+              <div class="mt-4 text-sm font-semibold text-indigo-700 transition group-hover:text-indigo-800">Explore →</div>
+            </article>
+
+            <!-- Feature 4 -->
+            <article class="reveal group rounded-3xl border border-slate-900/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
+              <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600/10 ring-1 ring-emerald-600/10">
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-emerald-700" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm4.3 7.3a1 1 0 0 1 0 1.4l-4.8 4.8a1 1 0 0 1-1.4 0L7.7 13.1a1 1 0 1 1 1.4-1.4l1.7 1.7l4.1-4.1a1 1 0 0 1 1.4 0Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Guardrails & approvals</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Lock sensitive phrasing, require approval for certain accounts, and keep a clean audit trail for peace of mind.
+              </p>
+              <div class="mt-4 text-sm font-semibold text-indigo-700 transition group-hover:text-indigo-800">Explore →</div>
+            </article>
+
+            <!-- Feature 5 -->
+            <article class="reveal group rounded-3xl border border-slate-900/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
+              <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-indigo-600/10 ring-1 ring-indigo-600/10">
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-indigo-700" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 3a7 7 0 1 1 0 14A7 7 0 0 1 12 3Zm0 2a5 5 0 1 0 0 10A5 5 0 0 0 12 5Zm-7 15.5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Built-in experiments</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Try two follow-up angles, compare outcomes, and keep the winner. It’s lightweight A/B testing for real conversations.
+              </p>
+              <div class="mt-4 text-sm font-semibold text-indigo-700 transition group-hover:text-indigo-800">Explore →</div>
+            </article>
+
+            <!-- Feature 6 -->
+            <article class="reveal group rounded-3xl border border-slate-900/10 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
+              <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-600/10 ring-1 ring-purple-600/10">
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-purple-700" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a5 5 0 0 1 5 5v1h1a4 4 0 0 1 4 4v5a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5v-5a4 4 0 0 1 4-4h1V7a5 5 0 0 1 5-5Zm3 6V7a3 3 0 0 0-6 0v1h6Zm-3 4a1 1 0 0 1 1 1v2.25a1 1 0 1 1-2 0V13a1 1 0 0 1 1-1Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900">Privacy-friendly by design</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                Keep control with role-based access, exportable logs, and retention settings that fit how your team works.
+              </p>
+              <div class="mt-4 text-sm font-semibold text-indigo-700 transition group-hover:text-indigo-800">Explore →</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="border-y border-slate-900/10 bg-white/60">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="grid items-center gap-10 lg:grid-cols-2">
+            <div class="reveal">
+              <p class="text-sm font-semibold text-indigo-700">Why Orbitlane</p>
+              <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                You can be automated without feeling automated
+              </h2>
+              <p class="mt-4 text-base leading-relaxed text-slate-600">
+                We built Orbitlane after watching great teams lose time to repetitive questions. The goal isn’t to send more messages —
+                it’s to send fewer, better ones, with consistent context and a clear next step.
+              </p>
+
+              <div class="mt-8 grid gap-4">
+                <div class="flex gap-3 rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                  <div class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-indigo-600/10 text-indigo-700 ring-1 ring-indigo-600/10">
+                    ✓
+                  </div>
+                  <div>
+                    <div class="text-sm font-semibold text-slate-900">Clearer handoffs</div>
+                    <div class="mt-1 text-sm text-slate-600">Route conversations with context so customers never repeat themselves.</div>
+                  </div>
+                </div>
+                <div class="flex gap-3 rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                  <div class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-purple-600/10 text-purple-700 ring-1 ring-purple-600/10">
+                    ⟡
+                  </div>
+                  <div>
+                    <div class="text-sm font-semibold text-slate-900">Simple controls</div>
+                    <div class="mt-1 text-sm text-slate-600">Approve drafts, lock phrases, or let low-risk replies send automatically.</div>
+                  </div>
+                </div>
+                <div class="flex gap-3 rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                  <div class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-cyan-600/10 text-cyan-700 ring-1 ring-cyan-600/10">
+                    ⟳
+                  </div>
+                  <div>
+                    <div class="text-sm font-semibold text-slate-900">Designed to adopt</div>
+                    <div class="mt-1 text-sm text-slate-600">Start with one inbox today — expand to teams and playbooks later.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <div class="relative overflow-hidden rounded-3xl border border-slate-900/10 bg-white shadow-lift">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/8 to-transparent"></div>
+                <div class="relative p-6 sm:p-8">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <div class="text-sm font-semibold text-slate-900">Quality dashboard</div>
+                      <div class="mt-1 text-xs text-slate-500">What improved this week</div>
+                    </div>
+                    <span class="rounded-full bg-emerald-600/10 px-2 py-1 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-600/10">
+                      +16% conversions
+                    </span>
+                  </div>
+
+                  <div class="mt-6 grid gap-4">
+                    <div class="rounded-2xl border border-slate-900/10 bg-slate-50 p-4">
+                      <div class="flex items-center justify-between">
+                        <div class="text-xs text-slate-600">Reply rate</div>
+                        <div class="text-xs font-semibold text-slate-600">Last 14 days</div>
+                      </div>
+                      <div class="mt-3 h-20 overflow-hidden rounded-xl bg-white p-3 ring-1 ring-slate-900/10">
+                        <div class="flex h-full items-end gap-2">
+                          <div class="h-[38%] w-3 rounded bg-indigo-300"></div>
+                          <div class="h-[54%] w-3 rounded bg-indigo-300"></div>
+                          <div class="h-[46%] w-3 rounded bg-indigo-300"></div>
+                          <div class="h-[64%] w-3 rounded bg-indigo-400"></div>
+                          <div class="h-[58%] w-3 rounded bg-indigo-400"></div>
+                          <div class="h-[72%] w-3 rounded bg-indigo-500"></div>
+                          <div class="h-[66%] w-3 rounded bg-indigo-500"></div>
+                          <div class="h-[84%] w-3 rounded bg-indigo-600"></div>
+                        </div>
+                      </div>
+                      <div class="mt-3 flex items-center justify-between text-xs text-slate-500">
+                        <span>Most improved: “follow‑up #2”</span>
+                        <span class="font-semibold text-indigo-700">+8.7%</span>
+                      </div>
+                    </div>
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+                      <div class="rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                        <div class="text-xs text-slate-600">Avg. time to reply</div>
+                        <div class="mt-2 text-2xl font-semibold text-slate-900">1h 58m</div>
+                        <div class="mt-1 text-xs text-slate-500">down from 3h 05m</div>
+                      </div>
+                      <div class="rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                        <div class="text-xs text-slate-600">Draft approvals</div>
+                        <div class="mt-2 text-2xl font-semibold text-slate-900">92%</div>
+                        <div class="mt-1 text-xs text-slate-500">with guardrails on</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 rounded-2xl border border-slate-900/10 bg-white p-4 shadow-soft">
+                    <div class="flex items-start gap-3">
+                      <div class="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-indigo-600/15 to-purple-600/10 ring-1 ring-slate-900/10">
+                        <span class="text-sm font-semibold text-indigo-700">AI</span>
+                      </div>
+                      <div>
+                        <div class="text-sm font-semibold text-slate-900">Weekly insight</div>
+                        <p class="mt-1 text-sm text-slate-600">
+                          Customers respond best when the first follow‑up includes one concrete option (time slot, doc, or quick call).
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4 text-center text-xs text-slate-500">Clear metrics, simple controls, less busywork.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="relative">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="text-sm font-semibold text-indigo-700">Pricing</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Plans that fit how you work</h2>
+            <p class="mt-4 text-base text-slate-600">Start small, upgrade when the workflow is dialed in. No hidden “seat surprises.”</p>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <!-- Basic -->
+            <article class="reveal rounded-3xl border border-slate-900/10 bg-white p-7 shadow-soft">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-semibold text-slate-900">Basic</h3>
+                <span class="rounded-full bg-slate-900/5 px-2 py-1 text-xs font-semibold text-slate-600 ring-1 ring-slate-900/10">
+                  Solo / early
+                </span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">One inbox, core drafts, and the essentials to stay consistent.</p>
+              <div class="mt-6 flex items-end gap-2">
+                <div class="text-4xl font-semibold text-slate-900">$29</div>
+                <div class="pb-1 text-sm text-slate-500">/ month</div>
+              </div>
+              <ul class="mt-6 space-y-3 text-sm text-slate-600">
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>1 inbox</span></li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>Voice profile + drafts</span></li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>Basic analytics</span></li>
+              </ul>
+              <a
+                href="#contact"
+                class="mt-7 inline-flex w-full items-center justify-center rounded-2xl border border-slate-900/10 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-soft transition hover:-translate-y-0.5 hover:bg-slate-50"
+              >
+                Choose Basic
+              </a>
+            </article>
+
+            <!-- Pro (highlighted) -->
+            <article class="reveal relative rounded-3xl border border-indigo-600/20 bg-gradient-to-b from-indigo-600/10 to-white p-7 shadow-lift ring-1 ring-indigo-600/10">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span class="rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 px-3 py-1 text-xs font-semibold text-white shadow-soft">
+                  Most popular
+                </span>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-semibold text-slate-900">Pro</h3>
+                <span class="rounded-full bg-indigo-600/10 px-2 py-1 text-xs font-semibold text-indigo-700 ring-1 ring-indigo-600/10">
+                  Teams
+                </span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Best for support + sales teams who want approvals and routing.</p>
+              <div class="mt-6 flex items-end gap-2">
+                <div class="text-4xl font-semibold text-slate-900">$59</div>
+                <div class="pb-1 text-sm text-slate-500">/ month</div>
+              </div>
+              <ul class="mt-6 space-y-3 text-sm text-slate-600">
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>Up to 5 inboxes</span></li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>Routing + assignments</span></li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>Approvals + guardrails</span></li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>Experiments + reports</span></li>
+              </ul>
+              <a
+                href="#contact"
+                class="mt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-soft ring-1 ring-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-900/95"
+              >
+                Choose Pro
+              </a>
+              <p class="mt-3 text-center text-xs text-slate-500">Includes a 14‑day trial. No card required.</p>
+            </article>
+
+            <!-- Premium -->
+            <article class="reveal rounded-3xl border border-slate-900/10 bg-white p-7 shadow-soft">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-lg font-semibold text-slate-900">Premium</h3>
+                <span class="rounded-full bg-slate-900/5 px-2 py-1 text-xs font-semibold text-slate-600 ring-1 ring-slate-900/10">
+                  Scale
+                </span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600">Advanced controls, onboarding, and governance for larger orgs.</p>
+              <div class="mt-6 flex items-end gap-2">
+                <div class="text-4xl font-semibold text-slate-900">$149</div>
+                <div class="pb-1 text-sm text-slate-500">/ month</div>
+              </div>
+              <ul class="mt-6 space-y-3 text-sm text-slate-600">
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>Unlimited inboxes</span></li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>Roles + audit logs</span></li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>Retention controls</span></li>
+                <li class="flex items-start gap-2"><span class="mt-0.5 text-emerald-700">✓</span><span>Priority onboarding</span></li>
+              </ul>
+              <a
+                href="#contact"
+                class="mt-7 inline-flex w-full items-center justify-center rounded-2xl border border-slate-900/10 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-soft transition hover:-translate-y-0.5 hover:bg-slate-50"
+              >
+                Talk to sales
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="border-y border-slate-900/10 bg-white/60">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="reveal mx-auto max-w-2xl text-center">
+            <p class="text-sm font-semibold text-indigo-700">Testimonials</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Teams adopt it faster than we expected</h2>
+            <p class="mt-4 text-base text-slate-600">A few notes from customers after shipping their first playbook.</p>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <figure class="reveal rounded-3xl border border-slate-900/10 bg-white p-7 shadow-soft">
+              <blockquote class="text-sm leading-relaxed text-slate-700">
+                “We didn’t want ‘AI support’ — we wanted consistency. Orbitlane keeps the tone clean and the answers accurate, which made
+                onboarding new reps a lot less painful.”
+              </blockquote>
+              <figcaption class="mt-6 flex items-center gap-3">
+                <div class="grid h-11 w-11 place-items-center rounded-2xl bg-indigo-600/10 ring-1 ring-indigo-600/10" aria-hidden="true">
+                  <span class="text-sm font-semibold text-indigo-700">AL</span>
+                </div>
+                <div>
+                  <div class="text-sm font-semibold text-slate-900">Arielle Lane</div>
+                  <div class="text-xs text-slate-500">Head of Growth, HarborStack</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="reveal rounded-3xl border border-slate-900/10 bg-white p-7 shadow-soft">
+              <blockquote class="text-sm leading-relaxed text-slate-700">
+                “The best part is the routing. Trials land in the right queue with context, and the suggested next step is usually spot on.
+                We book more calls without sending more messages.”
+              </blockquote>
+              <figcaption class="mt-6 flex items-center gap-3">
+                <div class="grid h-11 w-11 place-items-center rounded-2xl bg-cyan-600/10 ring-1 ring-cyan-600/10" aria-hidden="true">
+                  <span class="text-sm font-semibold text-cyan-700">JR</span>
+                </div>
+                <div>
+                  <div class="text-sm font-semibold text-slate-900">Jon Rivera</div>
+                  <div class="text-xs text-slate-500">Sales Lead, LunaPay</div>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="reveal rounded-3xl border border-slate-900/10 bg-white p-7 shadow-soft">
+              <blockquote class="text-sm leading-relaxed text-slate-700">
+                “Guardrails made this safe for us. Low-risk replies can auto-send, anything sensitive gets an approval — and the audit trail
+                is there when we need it.”
+              </blockquote>
+              <figcaption class="mt-6 flex items-center gap-3">
+                <div class="grid h-11 w-11 place-items-center rounded-2xl bg-purple-600/10 ring-1 ring-purple-600/10" aria-hidden="true">
+                  <span class="text-sm font-semibold text-purple-700">SK</span>
+                </div>
+                <div>
+                  <div class="text-sm font-semibold text-slate-900">Sana Kim</div>
+                  <div class="text-xs text-slate-500">RevOps, Kiteworks</div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="relative">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="reveal overflow-hidden rounded-3xl border border-slate-900/10 bg-gradient-to-br from-indigo-600/12 via-purple-600/10 to-cyan-500/10 p-8 shadow-lift sm:p-10">
+            <div class="grid items-center gap-8 lg:grid-cols-[1.35fr_0.65fr]">
+              <div>
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Ready to make your inbox feel lighter?</h2>
+                <p class="mt-4 max-w-2xl text-base text-slate-600">
+                  Start with one shared inbox and a single playbook. You’ll get faster replies, cleaner handoffs, and fewer “just checking in”
+                  messages.
+                </p>
+              </div>
+              <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
+                <a
+                  href="#contact"
+                  class="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-soft ring-1 ring-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-900/95"
+                >
+                  Book a demo
+                </a>
+                <a
+                  href="#pricing"
+                  class="inline-flex items-center justify-center rounded-2xl border border-slate-900/10 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-soft transition hover:-translate-y-0.5 hover:bg-slate-50"
+                >
+                  View pricing
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="border-t border-slate-900/10 bg-white/60">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div class="reveal">
+              <p class="text-sm font-semibold text-indigo-700">Contact</p>
+              <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Tell us what you’re trying to improve</h2>
+              <p class="mt-4 text-base text-slate-600">
+                Share your current workflow (tools, team size, and volume). We’ll recommend a setup that matches your tone and support model.
+              </p>
+              <div class="mt-8 grid gap-4">
+                <div class="rounded-2xl border border-slate-900/10 bg-white p-5 shadow-soft">
+                  <div class="text-sm font-semibold text-slate-900">Email</div>
+                  <div class="mt-1 text-sm text-slate-600">hello@orbitlane.io</div>
+                </div>
+                <div class="rounded-2xl border border-slate-900/10 bg-white p-5 shadow-soft">
+                  <div class="text-sm font-semibold text-slate-900">Response time</div>
+                  <div class="mt-1 text-sm text-slate-600">Usually within 1 business day</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <form class="rounded-3xl border border-slate-900/10 bg-white p-7 shadow-lift" data-demo-form>
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <label class="grid gap-2 text-sm">
+                    <span class="font-semibold text-slate-700">First name</span>
+                    <input
+                      type="text"
+                      required
+                      class="rounded-2xl border border-slate-900/10 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-indigo-600/30 focus:ring-2 focus:ring-indigo-600/15"
+                      placeholder="Arielle"
+                      autocomplete="given-name"
+                    />
+                  </label>
+                  <label class="grid gap-2 text-sm">
+                    <span class="font-semibold text-slate-700">Last name</span>
+                    <input
+                      type="text"
+                      required
+                      class="rounded-2xl border border-slate-900/10 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-indigo-600/30 focus:ring-2 focus:ring-indigo-600/15"
+                      placeholder="Lane"
+                      autocomplete="family-name"
+                    />
+                  </label>
+                </div>
+                <label class="mt-4 grid gap-2 text-sm">
+                  <span class="font-semibold text-slate-700">Work email</span>
+                  <input
+                    type="email"
+                    required
+                    class="rounded-2xl border border-slate-900/10 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-indigo-600/30 focus:ring-2 focus:ring-indigo-600/15"
+                    placeholder="you@company.com"
+                    autocomplete="email"
+                  />
+                </label>
+                <label class="mt-4 grid gap-2 text-sm">
+                  <span class="font-semibold text-slate-700">What should we help with?</span>
+                  <textarea
+                    rows="4"
+                    required
+                    class="resize-none rounded-2xl border border-slate-900/10 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-indigo-600/30 focus:ring-2 focus:ring-indigo-600/15"
+                    placeholder="We want faster follow-ups without sounding pushy…"
+                  ></textarea>
+                </label>
+                <button
+                  type="submit"
+                  class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-soft ring-1 ring-slate-900/10 transition hover:-translate-y-0.5 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-indigo-400/40"
+                >
+                  Request a demo
+                </button>
+                <p class="mt-3 text-center text-xs text-slate-500">
+                  By submitting, you agree to be contacted about Orbitlane.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-900/10 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid gap-10 md:grid-cols-4">
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-2">
+              <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 shadow-soft ring-1 ring-slate-900/10" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-white" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a8.5 8.5 0 1 1 0 17a8.5 8.5 0 0 1 0-17Zm0 3.25a.9.9 0 0 0-.9.9v2.1H9a.9.9 0 0 0 0 1.8h2.1v2.1a.9.9 0 1 0 1.8 0v-2.1H15a.9.9 0 1 0 0-1.8h-2.1v-2.1a.9.9 0 0 0-.9-.9Z"
+                  />
+                </svg>
+              </span>
+              <span class="text-base font-semibold tracking-tight text-slate-900">Orbitlane</span>
+            </div>
+            <p class="mt-4 max-w-md text-sm leading-relaxed text-slate-600">
+              A customer messaging platform for modern SaaS teams — fast replies, consistent tone, and calmer handoffs.
+            </p>
+            <div class="mt-6 flex items-center gap-3">
+              <a
+                href="#"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-900/10 bg-white shadow-soft transition hover:bg-slate-50"
+                aria-label="X (Twitter)"
+              >
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-slate-700" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M18.9 2H22l-6.8 7.77L23 22h-6.7l-5.2-6.77L5.2 22H2l7.3-8.35L1 2h6.9l4.7 6.2L18.9 2Zm-1.2 18h1.9L6.3 3.9H4.2L17.7 20Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-900/10 bg-white shadow-soft transition hover:bg-slate-50"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-slate-700" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.06c.53-1 1.82-2.05 3.74-2.05c4 0 4.74 2.63 4.74 6.05V21h-4v-5.3c0-1.26-.03-2.88-1.76-2.88c-1.76 0-2.03 1.37-2.03 2.79V21h-4V9Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-900/10 bg-white shadow-soft transition hover:bg-slate-50"
+                aria-label="GitHub"
+              >
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-slate-700" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.35-1.17-3.35-1.17c-.45-1.14-1.1-1.45-1.1-1.45c-.9-.62.07-.6.07-.6c1 .07 1.52 1.02 1.52 1.02c.9 1.52 2.36 1.08 2.94.83c.09-.64.35-1.08.64-1.33c-2.21-.25-4.54-1.11-4.54-4.94c0-1.09.39-1.98 1.03-2.68c-.1-.25-.45-1.27.1-2.64c0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.7.11 2.5.33c1.9-1.29 2.75-1.02 2.75-1.02c.55 1.37.2 2.39.1 2.64c.64.7 1.03 1.59 1.03 2.68c0 3.84-2.33 4.68-4.55 4.93c.36.31.68.92.68 1.86v2.76c0 .26.18.57.69.48A10 10 0 0 0 12 2Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-sm font-semibold text-slate-900">Product</div>
+            <ul class="mt-4 space-y-3 text-sm text-slate-600">
+              <li><a class="transition hover:text-slate-900" href="#features">Features</a></li>
+              <li><a class="transition hover:text-slate-900" href="#pricing">Pricing</a></li>
+              <li><a class="transition hover:text-slate-900" href="#contact">Book demo</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="text-sm font-semibold text-slate-900">Company</div>
+            <ul class="mt-4 space-y-3 text-sm text-slate-600">
+              <li><a class="transition hover:text-slate-900" href="#">About</a></li>
+              <li><a class="transition hover:text-slate-900" href="#">Careers</a></li>
+              <li><a class="transition hover:text-slate-900" href="#">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-slate-900/10 pt-8 sm:flex-row">
+          <p class="text-xs text-slate-500">© <span id="year"></span> Orbitlane. All rights reserved.</p>
+          <p class="text-xs text-slate-500">Built with Tailwind CSS and minimal JavaScript.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/script.js" defer></script>
+  </body>
+</html>
+
